@@ -13,10 +13,9 @@ The tool works as follows:
 
 2. The tool checks for URL age in days for all urls in the list.
 
-3. The tool processes and grades urls in the list. External css, image and script links add up one point for each link. All urls below one point are discarded. A new object list is generated containing url, points and age in days. This takes time as some urls are slow.
+3. The tool processes and grades urls in the list. External css, image and script links add up one point for each link. All urls below one point and/or with no age information are discarded. A new object list is generated containing url, points and age in days. This takes time as some urls are slow.
 
 4. Some urls are discarded based on several properties:   
-    -Url's age information is not available (comparison with point data not possible)  
     -Url's points are too much below average (possible good/not a phishing url)  
     -Url's age is above average (possible good/not a phishing url)  
 
