@@ -186,7 +186,7 @@ def grade_urls(urls):
 # plot data using matplotlib
 def plot_data(urls):
     # uncomment below line for full url processing
-    # gradedUrls = grade_urls(urls)
+    #gradedUrls = grade_urls(urls)
 
     # comment below for demo data processing
     gradedUrls = urls
@@ -194,12 +194,12 @@ def plot_data(urls):
     averages = getAverages(gradedUrls)
     x = []
     y = []
+
     for url in gradedUrls:
         # discard any url with age above average and points below average
-        if (url.age < averages[1] and url.points > averages[0]):
+        if (url.age < averages[1] and url.points > (averages[0] - 10)):
             x.append(url.points)
             y.append(url.age)
-
     plt.scatter(x, y, edgecolor='black', linewidth=1, alpha=0.75)
 
     plt.title('Urls: points and age')
